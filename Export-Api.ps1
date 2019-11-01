@@ -11,15 +11,15 @@
 .LINK
     https://github.com/SoftwareAG/webmethods-io-api-scripts
 .PARAMETER CreateConfigFile
-    Stored all values (except password) for API export in a hidden configuration
-    file in the current directory. Default filename is ".sag-cloud-api".
+    Stored all values for API export in a hidden configuration file.
 .PARAMETER ConfigFileName
     Use this name for the configuration file instead of the default (".sag-cloud-api").
     Will be used for creating the configuration file as well as reading from it.
 .PARAMETER BaseUrl
-    Name of the cloud base URL (default: )
+    Arbitrary base URL for accessing the tenant
 .PARAMETER Tenant 
-    Name of the cloud tenant.
+    Name of the cloud tenant. Will use 
+	https://$Tenant.gateway.webmethodscloud.com/rest/apigateway for access
 .PARAMETER Username 
     Username for connecting to tenant
 .PARAMETER Password

@@ -13,8 +13,12 @@ Export a specific API version into the file system, e.g. to place it under versi
 
 Go the directory into which you want to have the API assets be placed. 
 
-``` powershell
-Export-Api [ {-Tenant <TENANT NAME> | -BaseUrl <BASE URL OF REST API>} -Username <USERNAME> -Password <PASSWORD> [-CreateConfigFile] -ApiName <API NAME> -ApiVersion <API VERSION> ] [-Verbose]
+```
+Export-Api [ {-Tenant <TENANT NAME> | -BaseUrl <BASE URL OF REST API>} 
+	-Username <USERNAME> -Password <PASSWORD> 
+	[-CreateConfigFile] [-ConfigFileName <NAME OF CONFIG FILE>]
+	-ApiName <API NAME> -ApiVersion <API VERSION> ] 
+	[-Verbose]
 ```
 
 Options
@@ -38,12 +42,15 @@ In non-verbose mode the script writes the UUID of the API to STDOUT.
 
 ### Examples
 
-``` powershell
-Export-Api -Tenant foobar -Username user1 -Password 'secret' -CreateConfigFile -ApiName TestAPI -ApiVersion "1.0"
+```
+Export-Api -Tenant foobar 
+	-Username user1 -Password 'secret' 
+	-CreateConfigFile 
+	-ApiName TestAPI -ApiVersion "1.0"
 ```
 Will store the provided values in a configuration file in the current directory and then perform the export of the specified API and version. The UUID of the exported API will be written to the console.
 
-``` powershell
+```
 Export-Api -Verbose
 ```
 Read configuration file from current directory and perform the export with verbose output.
