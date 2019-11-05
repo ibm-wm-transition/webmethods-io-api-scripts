@@ -95,7 +95,7 @@ if ($PSBoundParameters['Verbose']) {
 # Create .gitignore file, if it does not exist
 [string]$ConfigFileileNameGitIgnore = '.gitignore'
 if (!(Test-Path $ConfigFileileNameGitIgnore -PathType Leaf)) {
-    Set-Content -Path .\$ConfigFileileNameGitIgnore -Value "$settingsFilePwdPrefix*`n$settingsFileApi`nExportReport.json"
+    Set-Content -Path .\$ConfigFileileNameGitIgnore -Value "$ConfigFileName`nExportReport.json"
 }
 
 
