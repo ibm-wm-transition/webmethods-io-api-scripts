@@ -11,7 +11,9 @@ Export a specific API version into the file system, e.g. to place it under versi
 
 ### Usage
 
-Go the directory into which you want to have the API assets be placed. 
+Go the directory into which you want to have the API assets be placed. From there invoke the script to get all artifacts related to the specified API get exported. After that export the direcotry's contents can be put under version control (e.g. Git). From there they can be deployed to another tenant as part of CI/CD.
+
+There is currently no check in place to validate that the specified combination of API name and API version returns only a single artifact. It is up to the user to ensure that only a single API instance is effectively being exported.
 
 ```
 Export-Api [ {-Tenant <TENANT NAME> | -BaseUrl <BASE URL OF REST API>} 
