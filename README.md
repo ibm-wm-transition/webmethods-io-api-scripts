@@ -16,7 +16,7 @@ Go the directory into which you want to have the API assets be placed.
 ```
 Export-Api [ {-Tenant <TENANT NAME> | -BaseUrl <BASE URL OF REST API>} 
 	-Username <USERNAME> -Password <PASSWORD> 
-	[-CreateConfigFile] [-ConfigFileName <NAME OF CONFIG FILE>]
+	[ -CreateConfigFile [-ConfigFileName <NAME OF CONFIG FILE>] ]
 	-ApiName <API NAME> -ApiVersion <API VERSION> ] 
 	[-ApiIdFileName]
 	[-Verbose]
