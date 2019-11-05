@@ -48,6 +48,7 @@ Param (
     [string]$ApiName,
     [string]$ApiVersion,
     [string]$ConfigFileName = ".sag-cloud-api",
+	[string]$ApiIdFileName = "sag-cloud-api-id",
     [switch]$Verbose,
     [switch]$CreateConfigFile,
     [string]$BaseUrl = "https://$Tenant.gateway.webmethodscloud.com/rest/apigateway"
@@ -135,6 +136,9 @@ if (($null -eq $apiId) -or ('' -eq $apiId)) {
 }
 
 Write-Output "$apiId"
+
+# Persist API ID for automated import
+Set-Content -Path .\$ApiIdFileName -Value "$apiId"
 
 # Trigger export
 [string]$tempFile='api.zip'
