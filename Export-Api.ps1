@@ -28,6 +28,11 @@
     Name of API to export
 .PARAMETER ApiVersion
     Version of API to export
+.PARAMETER ApiIdFileName
+    Use this name for storing the API ID as part of the export instead of the
+	default ("sag-cloud-api-id")
+.PARAMETER Verbose
+	Enable verbose output
 .EXAMPLE
     Export-Api -Tenant foobar -Username user1 -Password secret -CreateConfigFile -ApiName TestAPI -ApiVersion "1.0"
     
