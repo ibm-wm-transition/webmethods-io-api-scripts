@@ -27,6 +27,7 @@ Options
 - `-Username` : Username to login with
 - `-Password` : Password for username. Use single-quotes, if it contains special characters (incl. space)
 - `-CreateConfigFile` : Create configuration file in current directory
+- `-ConfigFileName` : Use custom name for creation of configuration file (default = .sag-cloud-api in current directory)
 - `-ApiName` : API name to search for
   - Use quotes, if it contains spaces
   - Supports wildcards
