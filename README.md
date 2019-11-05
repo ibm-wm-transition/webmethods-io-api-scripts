@@ -18,6 +18,7 @@ Export-Api [ {-Tenant <TENANT NAME> | -BaseUrl <BASE URL OF REST API>}
 	-Username <USERNAME> -Password <PASSWORD> 
 	[-CreateConfigFile] [-ConfigFileName <NAME OF CONFIG FILE>]
 	-ApiName <API NAME> -ApiVersion <API VERSION> ] 
+	[-ApiIdFileName]
 	[-Verbose]
 ```
 
@@ -31,7 +32,8 @@ Options
 - `-ApiName` : API name to search for
   - Use quotes, if it contains spaces
   - Supports wildcards
-- `-ApiVersion` 
+- `-ApiVersion`
+- `-ApiIdFileName`: Use custom name for file where API ID is stored during export (default = sag-cloud-api-id in current directory)
 - `-Verbose` : In verbose mode the following information will be written to STDOUT
   - Search parameters: Tenant, username, API name, API version
   - Body of search request in JSON format
